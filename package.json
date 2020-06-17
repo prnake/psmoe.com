@@ -31,5 +31,8 @@
     "hexo-tag-mplayer": "^1.0.1",
     "hexo-toc": "^1.1.0",
     "hexo-wordcount": "^6.0.1"
+  },
+  "devDependencies": {
+    "grunt-uncss": "^0.9.1"
   }
 }
