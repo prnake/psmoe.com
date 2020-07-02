@@ -8,7 +8,7 @@ date: 2019/6/21 12:00
 ---
 Welcome to [Hexo](https://hexo.io/)!
 
-show_me_more
+<!--more-->
 
 {% cplayer autoplay cson %}
 [

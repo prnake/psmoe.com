@@ -12,7 +12,7 @@ categories:
 
 主要需求是在校外结合 RSSHub 订阅 info ，避免错过重要通知。
 
-show_me_more
+<!--more-->
 
 首先利用清华大学提供的[WEBVPN](https://webvpn.tsinghua.edu.cn/)搭建实现自动登录功能的代理服务器。（新版WEBVPN只是校内代理，相较于以前自动登录info的SSLVPN风险较小）
 

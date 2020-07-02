@@ -7,7 +7,7 @@ date: 2020/7/2 21:17
 
 使用 GitHub Actions ，最大程度降低本地环境要求和开销。
 
-show_me_more
+<!--more-->
 
 在 `blog` 仓库的 `Actions` 选项卡下点击新建 `workflow` ，编写如下配置。
 
