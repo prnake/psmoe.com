@@ -11,12 +11,12 @@ jobs:
     - name: Checkout # 将仓库内master分支的内容下载到工作目录
       uses: actions/checkout@v1 # 脚本来自 https://github.com/actions/checkout
       
-    - name: Use Node.js 12 # 配置Node环境
+    - name: Setup Node.js # 配置Node环境
       uses: actions/setup-node@v1 # 配置脚本来自 https://github.com/actions/setup-node
       with:
         node-version: 12
     
-    - name: Setup Hexo env
+    - name: Setup Hexo
       env:
         ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
       run: |
