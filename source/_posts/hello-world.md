@@ -4,7 +4,12 @@ mathjax: true
 url: hello.html
 categories:
 	- 随便写写
+date: 2019/6/21 12:00
 ---
+Welcome to [Hexo](https://hexo.io/)!
+
+show_me_more
+
 {% cplayer autoplay cson %}
 [
 	1405283464
