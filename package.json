@@ -12,6 +12,7 @@
     "version": "4.2.1"
   },
   "dependencies": {
+    "grunt": "^1.1.0",
     "hexo": "^4.2.1",
     "hexo-all-minifier": "^0.5.3",
     "hexo-deployer-git": "^2.1.0",
