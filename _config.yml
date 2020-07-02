@@ -149,4 +149,4 @@ toc:
 deploy:
     type: git
     repo: git@github.com:prnake/psmoe.com.git
-    branch: pages
+    branch: gh-pages
