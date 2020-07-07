@@ -1,8 +1,7 @@
 name: Tencent CloudBase
 
 on:
-  push:
-    branches: [ gh-pages ]
+  page_build:
 
 jobs:
   deploy:
