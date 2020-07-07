@@ -143,6 +143,16 @@ image_minifier:
   progressive: false
 toc:
     maxDepth: 3
+douban:
+  user: 82536760
+  builtin: true
+  book:
+    title: '我读'
+    quote: ''
+  movie:
+    title: '我看'
+    quote: ''
+  timeout: 10000
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
