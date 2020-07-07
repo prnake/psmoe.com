@@ -20,3 +20,4 @@ jobs:
           secretKey: ${{ secrets.SECRET_KEY }}
           envId: ${{ secrets.ENV_ID }}
           staticSrcPath: ./
+          staitcIgnore: .git,.github,node_modules,psmoe.com
