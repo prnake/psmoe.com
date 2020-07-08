@@ -147,11 +147,11 @@ douban:
   user: 82536760
   builtin: true
   book:
-    title: '我读'
-    quote: ''
+    title: '我读的书'
+    quote: '什么书都看一点～'
   movie:
-    title: '我看'
-    quote: ''
+    title: '我看的剧'
+    quote: '随缘看剧～'
   timeout: 10000
 
 # Deployment
