@@ -1,7 +1,6 @@
 name: Tencent CloudBase
 
-on:
-  page_build:
+on: [page_build]
 
 jobs:
   deploy:
