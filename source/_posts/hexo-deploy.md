@@ -5,15 +5,15 @@ categories:
 date: 2020/7/8 15:45
 ---
 
-上车了腾讯云9.9元包年（500G存储+2000G流量）的[静态网站托管](https://cloud.tencent.com/product/wh)活动，于是考虑使用 `GitHub Actions` 实现 `Hexo` 的自动化生成和部署，以及利用腾讯云和 `Github Pages` 实现国内外CDN加速。
+上车了腾讯云9.9元包年（500G存储+2000G流量）的[静态网站托管](https://cloud.tencent.com/product/wh)活动，于是考虑使用 GitHub Actions 实现 Hexo 的自动化生成和部署，以及利用腾讯云和 Github Pages 实现国内外CDN加速。
 
 <!--more-->
 
-首先创建新项目，将 `Hexo` 目录下的必要文件上传至 `master` 分支（`Hexo` 应该会自动生成 `.gitignore` 文件）。
+首先创建新项目，将 Hexo 目录下的必要文件上传至 master 分支（Hexo 应该会自动生成 .gitignore 文件）。
 
-然后利用`GitHub Actions` 自动化生成静态文件并部署至 `gh-pages` 分支。
+然后利用 GitHub Actions 自动化生成静态文件并部署至 gh-pages 分支。
 
-在 `blog` 仓库的 `Actions` 选项卡下点击新建 `workflow` ，编写如下配置。
+在 blog 仓库的 Actions 选项卡下点击新建 workflow ，编写如下配置。
 
 ```yaml
 name: Deploy Blog
@@ -56,7 +56,7 @@ jobs:
 				hexo generate && hexo deploy # 执行部署程序
 ```
 
-同时在 `hexo` 的配置文件 `_config.yml` 中添加 `deploy` 相关的参数，例如：
+同时在 hexo 的配置文件 _config.yml 中添加 deploy 相关的参数，例如：
 
 ```yaml
 deploy:
@@ -65,13 +65,13 @@ deploy:
 	branch: gh-pages
 ```
 
-每当有新的 push 发生时，都会触发 `GitHub Actions` ，生成静态文件并 push 至 `gh-pages` 分支。
+每当有新的 push 发生时，都会触发 GitHub Actions ，生成静态文件并 push 至 gh-pages 分支。
 
-同时在 Hexo 的 `source` 目录下添加 `CNAME` 文件，填入需要解析到的域名，这样每次 `gh-pages` 变化时 github 都会自动运行 `Page Build` 并设置解析。
+同时在 Hexo 的 source 目录下添加 CNAME 文件，填入需要解析到的域名，这样每次 gh-pages 变化时 github 都会自动运行 Page Build 并设置解析。
 
-接下来使用 [Tencent CloudBase Github Action](https://github.com/TencentCloudBase/cloudbase-action) 将 `gh-pages` 分支部署到腾讯云开发平台，这里的思路是检测 `Page Build` 的动作。
+接下来使用 [Tencent CloudBase Github Action](https://github.com/TencentCloudBase/cloudbase-action) 将 gh-pages 分支部署到腾讯云开发平台，这里的思路是检测 Page Build 的动作。
 
-创建一个新的 `workflow` ，编写如下配置。
+创建一个新的 workflow ，编写如下配置。
 
 ```yaml
 name: Tencent CloudBase
@@ -97,7 +97,7 @@ jobs:
           staticSrcPath: ./
 ```
 
-其中的 `SECRET_ID` 和 `SECRET_KEY` 在腾讯云[访问管理](https://console.cloud.tencent.com/cam/capi)页面获取，`ENV_ID` 即环境Id，在云开发的[控制台](https://console.cloud.tencent.com/tcb/env/overview)获取，并添加到 `setting/secret` 中。
+其中的 SECRET_ID 和 SECRET_KEY 在腾讯云[访问管理](https://console.cloud.tencent.com/cam/capi)页面获取，ENV_ID 即环境Id，在云开发的[控制台](https://console.cloud.tencent.com/tcb/env/overview)获取，并添加到 setting/secret 中。
 
 这样，每当有新 push 时， github 都会自动生成 Hexo 的静态博客文件并部署到腾讯云和 Github Pages 。
 
