@@ -12,6 +12,8 @@
     "version": "4.2.1"
   },
   "dependencies": {
+    "clean-css": "^4.2.3",
+    "constantinople": "^3.1.2",
     "grunt": "^1.1.0",
     "hexo": "^4.2.1",
     "hexo-all-minifier": "^0.5.3",
@@ -33,7 +35,12 @@
     "hexo-tag-cplayer": "^1.0.0",
     "hexo-tag-mplayer": "^1.0.1",
     "hexo-toc": "^1.1.0",
-    "hexo-wordcount": "^6.0.1"
+    "hexo-wordcount": "^6.0.1",
+    "kind-of": "^6.0.3",
+    "lodash": "^4.17.19",
+    "minimist": "^0.2.1",
+    "set-value": "^2.0.1",
+    "uglify-js": "^2.8.29"
   },
   "devDependencies": {
     "grunt-uncss": "^0.9.1"
