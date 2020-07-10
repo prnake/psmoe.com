@@ -35,4 +35,5 @@ jobs:
     - name: Deploy
       run: |
         # publish
+        hexo bangumi -u
         hexo generate && hexo deploy # 执行部署程序
