@@ -8,7 +8,7 @@ subtitle: 'Papersnake'
 description: 'Anything that can go wrong will go wrong.'
 keywords: 纸蛇,Papersnake,blog
 author: Papersnake
-language: zh-cn
+language: zh-CN
 timezone: ''
 
 # URL
@@ -146,13 +146,26 @@ toc:
 douban:
   user: 82536760
   builtin: true
+  show: 1
   book:
     title: '我读的书'
-    quote: '什么书都看一点～'
+    quote: '什么书都读一点～'
   movie:
-    title: '我看的剧'
-    quote: '随缘看剧～'
+    title: '我追的剧'
+    quote: '随缘追剧～'
   timeout: 10000
+bangumi:
+  enable: true
+  builtin: true
+  path: 
+  vmid: 35480266
+  title: '我追的番'
+  quote: 生命不息，追番不止！
+  show: 1
+  loading:
+  metaColor: '#fb7299'
+  color: 
+  webp: false
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
