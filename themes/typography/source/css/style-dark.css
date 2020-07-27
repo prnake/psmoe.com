@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("/themes/typography/source/css/fonts.css");
 @keyframes fadein {
   from {
     opacity: 0;
@@ -270,9 +269,13 @@ html h6 {
   font-family: "Lora", "Noto Serif SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "'Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
   color: #222;
 }
+html li {
+  font-family: "Lora", "Noto Serif SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "'Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
+}
 html.serif body,
 html.serif span,
 html.serif p,
+html.serif li,
 html.serif h1,
 html.serif h2,
 html.serif h3,

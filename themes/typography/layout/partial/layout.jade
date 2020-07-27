@@ -23,6 +23,11 @@ html(lang="zh-CN")
         script(src= url_for('js/typography.min.js'))
         script(src= url_for('js/material-scrolltop.js'))
         script(src= url_for('js/prettify.js'))
+        if(theme.hitokoto)
+            script()
+                |function hitokoto(){var arr,reg=new RegExp("(^| )hitokoto=([^;]*)(;|$)");if(arr=document.cookie.match(reg))$("#hitokoto").html(arr[2]);else $("#hitokoto").html("");$.get("
+                = theme.hitokoto.api
+                |",{},function(response){$("#hitokoto").html(response.hitokoto);document.cookie="hitokoto="+response.hitokoto},"JSON");}hitokoto()
         if(theme.live2d)
             script(src="/js/L2Dwidget.min.js")
             script()

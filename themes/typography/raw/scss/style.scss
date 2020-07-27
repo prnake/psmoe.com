@@ -48,12 +48,16 @@ html {
     font-family: $fontList;
     color: $letterColor;
   }
+  li{
+    font-family: $fontList;
+  }
 
   &.serif {
 
     body,
     span,
     p,
+    li,
     h1,
     h2,
     h3,

@@ -2,7 +2,7 @@ title_primary: "纸蛇" # the bigger text
 title_secondary: "Anything that can go wrong will go wrong." # the smaller text
 hitokoto: 
     enable: true
-    api: https://api.pka.moe/hitokoto/?format=js&charset=utf-8
+    api: https://v1.hitokoto.cn/?max_length=15
 
 keywords:
 
