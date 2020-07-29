@@ -18,7 +18,7 @@ date: 2020/7/29 10:12
 >
 > <a href="https://github.com/ctfs/write-ups-2015/blob/master/csaw-ctf-2015/reverse/wyvern-500/wyvern_c85f1be480808a9da350faaa6104a19b"><span id="inline-blue">下载文件</span></a>
 
-程序是C++写的64位ELF，运行时需要输入secret验证，然后输出验证结果。
+程序是 C++写的 64 位 ELF，运行时需要输入 secret 验证，然后输出验证结果。
 
 ```basic
 +-----------------------+
@@ -33,7 +33,7 @@ Enter the dragon's secret: flag
 [-] You have failed. The dragon's power, speed and intelligence was greater.
 ```
 
-使用IDA Pro反编译，查看伪码，注意到关键语句：
+使用 IDA Pro 反编译，查看伪码，注意到关键语句：
 
 ```c
 std::vector<int,std::allocator<int>>::push_back(&hero, &secret_100);
@@ -69,7 +69,7 @@ v6 = std::string::length(v11) - 1LL != legend >> 2;
 
 ## 思路一：找规律
 
-观察到 `secret_\d*` 字段中的数字每次相差不大，且100正好是 d（dragon首字母） 的 ASCII 符号，所以猜测 secret 为数字差代表的 ASCII。（[这篇文章](https://ohaithe.re/post/129657401392/csaw-quals-2015-reversing-500-wyvern)从伪码中直接读出了加密方法）
+观察到 `secret_\d*` 字段中的数字每次相差不大，且 100 正好是 d（dragon 首字母） 的 ASCII 符号，所以猜测 secret 为数字差代表的 ASCII。（[这篇文章](https://ohaithe.re/post/129657401392/csaw-quals-2015-reversing-500-wyvern) 从伪码中直接读出了加密方法）
 
 ```c
 a = [0,100,214,266,369,417,527,622,733,847,942,1054,1106,1222,1336,1441,1540,1589,1686,1796,1891,1996,2112,2165,2260,2336,2412,2498,2575]
@@ -106,7 +106,7 @@ while(move):
 	move = False
 	for c in chars:
 		s = flag + c
-		s = s.ljust(28,'A') #补全28位
+		s = s.ljust(28,'A') #补全 28 位
 		cmd = os.popen("echo '%s' | ../../../../pin -t inscount0.so -- /root/pwn/wyvern;cat ./inscount.out" % s).read()
 		cnt = int(re.search("Count ([0-9]*)", cmd).group(1)) #统计指令数量
 		if c=='/':
@@ -122,7 +122,7 @@ print("flag:")
 print(flag)
 ```
 
-（思路来自[这篇文章](https://bruce30262.github.io/csaw-ctf-2015-wyvern/)）
+（思路来自 [这篇文章](https://bruce30262.github.io/csaw-ctf-2015-wyvern/)）
 
 ## ltrace
 
@@ -210,4 +210,3 @@ success
 
 [+] A great success! Here is a flag{dr4g0n_or_p4tric1an_it5_LLVM}
 ```
-

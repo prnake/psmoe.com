@@ -5,7 +5,7 @@ categories:
 date: 2020/7/8 15:45
 ---
 
-上车了腾讯云9.9元包年（500G存储+2000G流量）的[静态网站托管](https://cloud.tencent.com/product/wh)活动，于是考虑使用 GitHub Actions 实现 Hexo 的自动化生成和部署，以及利用腾讯云和 Github Pages 实现国内外CDN加速。
+上车了腾讯云 9.9 元包年（500G 存储+2000G 流量）的 [静态网站托管](https://cloud.tencent.com/product/wh) 活动，于是考虑使用 GitHub Actions 实现 Hexo 的自动化生成和部署，以及利用腾讯云和 Github Pages 实现国内外 CDN 加速。
 
 <!--more-->
 
@@ -18,17 +18,17 @@ date: 2020/7/8 15:45
 ```yaml
 name: Deploy Blog
 
-on: [push] # 当有新push时运行
+on: [push] # 当有新 push 时运行
 
 jobs:
 	build:
-		runs-on: ubuntu-latest # 在最新版的Ubuntu系统下运行
+		runs-on: ubuntu-latest # 在最新版的 Ubuntu 系统下运行
 		
 		steps:
-		- name: Checkout # 将仓库内master分支的内容下载到工作目录
+		- name: Checkout # 将仓库内 master 分支的内容下载到工作目录
 			uses: actions/checkout@v1
 			
-		- name: Setup Node.js # 配置Node环境
+		- name: Setup Node.js # 配置 Node 环境
 			uses: actions/setup-node@v1
 			with:
 				node-version: 12
@@ -47,7 +47,7 @@ jobs:
 				git config --global user.name 'prnake'
 				git config --global user.email 'prnake@gmail.com'
 				# install dependencies
-				npm i -g hexo-cli # 安装hexo
+				npm i -g hexo-cli # 安装 hexo
 				npm i
 	
 		- name: Deploy
@@ -97,11 +97,11 @@ jobs:
           staticSrcPath: ./
 ```
 
-其中的 SECRET_ID 和 SECRET_KEY 在腾讯云[访问管理](https://console.cloud.tencent.com/cam/capi)页面获取，ENV_ID 即环境Id，在云开发的[控制台](https://console.cloud.tencent.com/tcb/env/overview)获取，并添加到 setting/secret 中。
+其中的 SECRET_ID 和 SECRET_KEY 在腾讯云 [访问管理](https://console.cloud.tencent.com/cam/capi) 页面获取，ENV_ID 即环境 Id，在云开发的 [控制台](https://console.cloud.tencent.com/tcb/env/overview) 获取，并添加到 setting/secret 中。
 
 这样，每当有新 push 时， github 都会自动生成 Hexo 的静态博客文件并部署到腾讯云和 Github Pages 。
 
-由于腾讯云CDN缺乏国外服务器，所以国外线路走 Github 自己的 CDN 更好。使用 DNS 服务（例如[DNSPod](https://www.dnspod.cn/)）将域名国内 CNAME 至腾讯云，国外 CNAME 至 Github 平台即可。
+由于腾讯云 CDN 缺乏国外服务器，所以国外线路走 Github 自己的 CDN 更好。使用 DNS 服务（例如 [DNSPod](https://www.dnspod.cn/)）将域名国内 CNAME 至腾讯云，国外 CNAME 至 Github 平台即可。
 
 ![CNAME](/images/hexo-deploy1.png)
 
@@ -109,7 +109,6 @@ jobs:
 
 ![PING TEST](/images/hexo-deploy2.png)
 
-总的返回ip有18个，其中 github 4个，腾讯云14个，全球解析延迟基本控制在30ms。相比之前使用的七牛云延迟应该有所上升，但网站加载时的首字节时间（TTFB）大幅下降，因此网站的实际访问体验明显变快了（虽然为了加载字体和渲染Live2D依然要耗费大量时间），这估计与回源效率和服务器质量有关。
+总的返回 ip 有 18 个，其中 github 4 个，腾讯云 14 个，全球解析延迟基本控制在 30ms。相比之前使用的七牛云延迟应该有所上升，但网站加载时的首字节时间（TTFB）大幅下降，因此网站的实际访问体验明显变快了（虽然为了加载字体和渲染 Live2D 依然要耗费大量时间），这估计与回源效率和服务器质量有关。
 
-总的部署可以参考[本博客的 Github 项目](https://github.com/prnake/psmoe.com)。
-
+总的部署可以参考 [本博客的 Github 项目](https://github.com/prnake/psmoe.com)。

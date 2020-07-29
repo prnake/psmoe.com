@@ -45,7 +45,7 @@ Namespaces are one honking great idea -- let's do more of those!
 
 ## lru_cache
 
-`lru_cache` 属于 `functools` ，是一个为函数提供缓存功能的装饰器，利用的是 [最久未使用算法(Least recently used)](https://en.wikipedia.org/wiki/Cache_algorithms#Examples) 进行缓存。适合在**需要重用之前计算结果，且函数参数可哈希**的情况下使用。比如**动态规划、记忆化搜索**，可以减少存储计算结果的代码。
+`lru_cache` 属于 `functools` ，是一个为函数提供缓存功能的装饰器，利用的是 [最久未使用算法 (Least recently used)](https://en.wikipedia.org/wiki/Cache_algorithms#Examples) 进行缓存。适合在**需要重用之前计算结果，且函数参数可哈希**的情况下使用。比如**动态规划、记忆化搜索**，可以减少存储计算结果的代码。
 
 该函数的默认调用参数为`@functools.lru_cache(maxsize=128, typed=False)`。特别的，如果 *maxsize* 设为 `None`，LRU 特性将被禁用且缓存可无限增长。
 
@@ -101,9 +101,9 @@ class Solution:
 ### 什么是异常？
 
 - 异常即是一个事件，该事件会在程序执行过程中发生，影响了程序的正常执行。
-- 一般情况下，在Python无法正常处理程序时就会发生一个异常。
-- 异常是Python对象，表示一个错误。
-- 当Python脚本发生异常时我们需要捕获处理它，否则程序会终止执行。
+- 一般情况下，在 Python 无法正常处理程序时就会发生一个异常。
+- 异常是 Python 对象，表示一个错误。
+- 当 Python 脚本发生异常时我们需要捕获处理它，否则程序会终止执行。
 
 ### 异常处理
 
@@ -119,18 +119,18 @@ try/except 语句用来检测 try 语句块中的错误，从而让 except 语�
 try:
 <语句>        #运行别的代码
 except <名字>：
-<语句>        #如果在try部份引发了'name'异常
+<语句>        #如果在 try 部份引发了'name'异常
 except <名字>，<数据>:
 <语句>        #如果引发了'name'异常，获得附加的数据
 else:
 <语句>        #如果没有异常发生
 ```
 
-try的工作原理是，当开始一个try语句后，python就在当前程序的上下文中作标记，这样当异常出现时就可以回到这里，try子句先执行，接下来会发生什么依赖于执行时是否出现异常。
+try 的工作原理是，当开始一个 try 语句后，python 就在当前程序的上下文中作标记，这样当异常出现时就可以回到这里，try 子句先执行，接下来会发生什么依赖于执行时是否出现异常。
 
-- 如果当try后的语句执行时发生异常，python就跳回到try并执行第一个匹配该异常的except子句，异常处理完毕，控制流就通过整个try语句（除非在处理异常时又引发新的异常）。
-- 如果在try后的语句里发生了异常，却没有匹配的except子句，异常将被递交到上层的try，或者到程序的最上层（这样将结束程序，并打印默认的出错信息）。
-- 如果在try子句执行时没有发生异常，python将执行else语句后的语句（如果有else的话），然后控制流通过整个try语句。
+- 如果当 try 后的语句执行时发生异常，python 就跳回到 try 并执行第一个匹配该异常的 except 子句，异常处理完毕，控制流就通过整个 try 语句（除非在处理异常时又引发新的异常）。
+- 如果在 try 后的语句里发生了异常，却没有匹配的 except 子句，异常将被递交到上层的 try，或者到程序的最上层（这样将结束程序，并打印默认的出错信息）。
+- 如果在 try 子句执行时没有发生异常，python 将执行 else 语句后的语句（如果有 else 的话），然后控制流通过整个 try 语句。
 
 ### 巧用异常抛出机制
 
@@ -154,7 +154,7 @@ class Solution:
         return res
 ```
 
-## 迭代器iter
+## 迭代器 iter
 
 迭代器的好处是 `for in` 遍历时，迭代器自身也会移动，适合处理只需要使用一次的数据。
 
@@ -171,6 +171,5 @@ class Solution:
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         t = iter(t)
-        return all(c in t for c in s) #t在c in t的查找过程中不断右移
+        return all(c in t for c in s) #t 在 c in t 的查找过程中不断右移
 ```
-
