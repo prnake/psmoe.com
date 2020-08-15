@@ -20,7 +20,6 @@ html,body{ overflow:scroll; min-height:101%;}
 html{ overflow:-moz-scrollbars-vertical;}
 
 body {
-  color: #606975;
   font-weight: 400;
 
   .site-title * {
@@ -80,7 +79,7 @@ h5,
 h6,
 b,
 strong {
-  font-family: 'Lora', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "'Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
+  font-family: 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "'Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
 }
 
 @import 'nprogress.scss';
@@ -238,15 +237,6 @@ video::-webkit-media-controls-panel {
   &:hover {
     opacity: 1;
   }
-}
-
-.about-avatar {
-  position: absolute;
-  z-index: 2;
-  right: 10%;
-  width: 200px;
-  height: 200px;
-  background: url(https://imjad.cn/usr/themes/Moricolor/img/shinobux3.png?v=1) no-repeat 0 0;
 }
 
 .about-avatar:hover {

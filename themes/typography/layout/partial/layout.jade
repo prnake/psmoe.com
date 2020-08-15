@@ -31,9 +31,9 @@ html(lang="zh-CN")
         if(theme.live2d)
             script(src="/js/L2Dwidget.min.js")
             script()
-                |L2Dwidget.init({"model":{"jsonPath":"
+                |function browserRedirect(){var b=navigator.userAgent.toLowerCase();var c=b.match(/ipad/i)=="ipad";var d=b.match(/iphone/i)=="iphone";var a=b.match(/midp/i)=="midp";var e=b.match(/android/i)=="android";if(c||d||a||e){}else{document.write('<script src="/js/L2Dwidget.min.js"><\/script><script>L2Dwidget.init({model:{jsonPath:"
                 = theme.live2d
-                |"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.9},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});
+                |"},display:{position:"left",width:150,height:300},mobile:{show:!0},react:{opacity:.9},log:!1,pluginJsPath:"lib/",pluginModelPath:"assets/",pluginRootPath:"live2dw/",tagMode:!1})<\/script> ')}}browserRedirect();
         if(page.mathjax)
             script() $(document).ready(function(){$.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML",function(){MathJax.Hub.Config({tex2jax:{inlineMath:[["$","$"],["\\(","\\)"]]}});var math=document.getElementsByClassName("entry-content")[0];MathJax.Hub.Queue(["Typeset",MathJax.Hub,math])})});
         script() $('body').materialScrollTop();
