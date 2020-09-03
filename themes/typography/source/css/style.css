@@ -266,11 +266,11 @@ html h3,
 html h4,
 html h5,
 html h6 {
-  font-family: "Noto Serif SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "'Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
+  font-family: "Noto Serif SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
   color: #222;
 }
 html li {
-  font-family: "Noto Serif SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "'Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
+  font-family: "Noto Serif SC", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", Arial, Verdana, sans-serif;
 }
 html.serif body,
 html.serif span,
@@ -310,37 +310,36 @@ html {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 35px;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 25px;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 23px;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 21px;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 17px;
 }
 
 body {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.5em;
   background-repeat: repeat;
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
   min-height: 100vh;
 }
 body::before {
@@ -522,6 +521,17 @@ a:hover, a:focus {
   color: #1b1e21;
 }
 
+.post-page .post-container p a {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, rgba(49, 184, 204, 0.5)));
+  background: -o-linear-gradient(top, transparent 70%, rgba(49, 184, 204, 0.5) 70%);
+  background: linear-gradient(to bottom, transparent 70%, rgba(49, 184, 204, 0.5) 70%);
+  border-bottom: 0px;
+  color: inherit;
+}
+.post-page .post-container p a:hover, .post-page .post-container p a:focus {
+  color: inherit !important;
+}
+
 .a-title {
   text-decoration: none;
   background-color: transparent;
@@ -550,7 +560,7 @@ a:hover, a:focus {
 
 .soc {
   margin: 0 5px 0 0;
-  font-size: 18px !important;
+  font-size: 17px !important;
 }
 .soc a {
   border-bottom: solid transparent 2px;
@@ -595,7 +605,7 @@ footer * {
 }
 
 .post-title {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
   margin: 3px 0;
 }
@@ -627,27 +637,27 @@ figure > table {
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 25px;
   }
 
   h3 {
-    font-size: 28px;
+    font-size: 23px;
   }
 
   h4 {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   h5 {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   h6 {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .site-title-large {
@@ -731,7 +741,7 @@ figure > table {
   }
 
   .post-title {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin: 3px 0;
   }
@@ -795,27 +805,27 @@ figure > table {
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 25px;
   }
 
   h3 {
-    font-size: 28px;
+    font-size: 23px;
   }
 
   h4 {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   h5 {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   h6 {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .site-title-large {
@@ -899,7 +909,7 @@ figure > table {
   }
 
   .post-title {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin: 3px 0;
   }

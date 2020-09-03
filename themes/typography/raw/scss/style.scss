@@ -8,7 +8,7 @@ $fontList: 'Noto Serif SC',
 BlinkMacSystemFont,
 "Helvetica Neue",
 "PingFang SC",
-"'Hiragino Sans GB",
+"Hiragino Sans GB",
 STHeiti,
 "Microsoft Yahei",
 "Source Han Sans SC",
@@ -93,46 +93,36 @@ html {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 35px;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 25px;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 23px;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 21px;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 17px;
 }
 
 body {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.5em;
-
-  @if lightness($backgroundColor)>50 {
-    // background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==");
-  }
-
-  @else {
-    // background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi/P//Py8DpQCXISBxJlING4QaGEdDiQgAEGAAg8sST3LGZYoAAAAASUVORK5CYII=");
-  }
-
   background-repeat: repeat;
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
   min-height: 100vh;
 
   &::before {
@@ -164,10 +154,6 @@ body {
   padding: 80px 40px;
   overflow: hidden;
   float: left;
-
-  // :nth-child(1) {
-  //   margin-top: 0;
-  // }
 }
 
 .row {
@@ -282,10 +268,6 @@ body {
   font-size: 18px;
 }
 
-// .site-title-links a {
-//   border-bottom: solid $foregroundColor 2px;
-// }
-
 .no-margin-left {
   margin-left: 0;
 }
@@ -332,6 +314,17 @@ a {
   }
 }
 
+.post-page .post-container p a{
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, rgba(49,184,204,0.5)));
+  background: -o-linear-gradient(top, transparent 70%, rgba(49,184,204,0.5) 70%);
+  background: linear-gradient(to bottom, transparent 70%, rgba(49,184,204,0.5) 70%);
+  border-bottom: 0px;
+  color: inherit;
+  &:hover,&:focus {
+    color: inherit !important;
+  }
+}
+
 .a-title {
   text-decoration: none;
   background-color: transparent;
@@ -364,7 +357,7 @@ a {
 
 .soc {
   margin: 0 5px 0 0;
-  font-size: 18px !important;
+  font-size: 17px !important;
 
   a {
     border-bottom: solid transparent 2px;
@@ -425,7 +418,7 @@ footer * {
 }
 
 .post-title {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
   margin: 3px 0;
 }
@@ -457,27 +450,27 @@ figure>table {
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 25px;
   }
 
   h3 {
-    font-size: 28px;
+    font-size: 23px;
   }
 
   h4 {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   h5 {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   h6 {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .site-title-large {
@@ -561,7 +554,7 @@ figure>table {
   }
 
   .post-title {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin: 3px 0;
   }
@@ -627,27 +620,27 @@ figure>table {
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 25px;
   }
 
   h3 {
-    font-size: 28px;
+    font-size: 23px;
   }
 
   h4 {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   h5 {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   h6 {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .site-title-large {
@@ -731,7 +724,7 @@ figure>table {
   }
 
   .post-title {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     margin: 3px 0;
   }
